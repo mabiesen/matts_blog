@@ -16,7 +16,8 @@ ActiveRecord::Schema.define(version: 2020_04_17_074938) do
   enable_extension "plpgsql"
 
   create_table "blogs", force: :cascade do |t|
-    t.text "title"
+    t.string "title", limit: 30
+    t.string "title_url", limit: 40
     t.text "summary"
     t.text "content_html"
     t.datetime "created_at", precision: 6, null: false

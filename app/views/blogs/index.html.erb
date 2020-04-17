@@ -6,9 +6,10 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Title Url</th>
       <th>Summary</th>
       <th>Content html</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -16,6 +17,7 @@
     <% @blogs.each do |blog| %>
       <tr>
         <td><%= blog.title %></td>
+	<td><%= blog.title_url %></td>
         <td><%= blog.summary %></td>
         <td><%= blog.content_html %></td>
         <td><%= link_to 'Show', blog %></td>

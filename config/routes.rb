@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   resources :blogs
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  get '/blog_page/:blog_title', to: 'blogs_display#blog_page'
 end
