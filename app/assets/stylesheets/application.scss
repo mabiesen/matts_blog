@@ -2,7 +2,11 @@
 @import 'layout/*';
 @import 'blogs_display/*';
 
+
 // from webpack, for code syntax highlighting
 // would like to see this import moved to app/javascripts
-@import 'highlightjs/styles/a11y-dark.css';
+// @import 'highlightjs/styles/a11y-dark.css';
+
+// pretty, easily searched tables 
+// @import 'datatables.net-bs4/css/dataTables.bootstrap4.min.css';
 
