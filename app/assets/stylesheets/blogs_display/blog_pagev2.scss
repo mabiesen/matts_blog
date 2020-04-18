@@ -1,0 +1,36 @@
+#blog-pagev2_container {
+  width: 100%;
+
+  .blog-title_container {
+    background-color: $blog_titlebox_background_color;
+    line-height: 125px;
+    height: 125px;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    font-size: 75px;
+  }
+
+  .blog-content_container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      text-indent: 40px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+    code {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
