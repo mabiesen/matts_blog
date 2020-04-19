@@ -21,7 +21,7 @@
         <td><%= blog.title %></td>
 	<td><%= blog.title_url %></td>
         <td><%= blog.summary %></td>
-        <td><%= blog.content_html %></td>
+	<td style='max-width:300px;'><pre><code class='html'><%= blog.content_html %></code></pre></td>
         <td><%= link_to 'Show', blog %></td>
         <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
         <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
