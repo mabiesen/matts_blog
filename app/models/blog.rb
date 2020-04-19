@@ -1,5 +1,5 @@
 class Blog < ApplicationRecord
-  after_initialize :set_title_url
+  before_save :set_title_url
 
   def set_title_url
     date = if self.created_at
@@ -8,7 +8,7 @@ class Blog < ApplicationRecord
 	     Date.today
 	   end
     underscored_title = "#{date}_#{self.title.gsub(' ','_')}"
-    self.title_url = sanitize_string_for_title_url(underscored_title) 
+    self.title_url = sanitize_string_for_title_url(underscored_title).downcase 
   end
 
   def sanitize_string_for_title_url(url_string)
