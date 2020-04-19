@@ -9,7 +9,11 @@ require("@rails/activestorage").start()
 require("channels")
 require("datatables.net-bs4")
 require("highlightjs")
+require("codemirror")
 
 import '../stylesheets/application';
 import './highlights.js';
 import './basic_datatable.js';
+
+import 'codemirror/mode/htmlmixed/htmlmixed.js'
+import './basic_codemirror.js';

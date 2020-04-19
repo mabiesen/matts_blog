@@ -12,7 +12,11 @@
 
 <p>
   <strong>Content html:</strong>
-  <%= @blog.content_html %>
+  <pre>
+    <code class='html'>
+<%= @blog.content_html %>
+    </code>
+  <pre>
 </p>
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |

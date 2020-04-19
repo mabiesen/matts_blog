@@ -13,17 +13,17 @@
 
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_area :title %>
+    <%= form.text_field :title %>
   </div>
 
   <div class="field">
     <%= form.label :summary %>
-    <%= form.text_area :summary %>
+    <%= form.text_field :summary %>
   </div>
 
   <div class="field">
     <%= form.label :content_html %>
-    <%= form.text_area :content_html %>
+    <%= form.text_area :content_html, style: 'width: 600px; height: 800px;', id: 'textarea_editor' %>
   </div>
 
   <div class="actions">
