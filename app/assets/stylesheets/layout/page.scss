@@ -1,4 +1,10 @@
 html, body {
   margin: 0;
-  height: 100px;
+  height: 100%;
+  color: $default_text_color;
+  background-color: $default_background_color;
+
+  #page_content_wrapper {
+    min-height: 100vw;
+  }
 }

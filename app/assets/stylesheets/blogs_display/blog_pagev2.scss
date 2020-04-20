@@ -1,38 +1,41 @@
 #blog-pagev2_container {
   width: 100%;
+  height: 100%;
 
   .blog-title_container {
     background-color: $blog_titlebox_background_color;
-    color: $blog_title_font_color;
-    line-height: 125px;
-    height: 125px;
+    color: $blog_title_text_color;
+    line-height: $huge_font_size + 50px;
+    height: $huge_font_size + 50px;
     vertical-align: middle;
     text-align: center;
     width: 100%;
-    font-size: 75px;
+    font-size: $huge_font_size;
   }
 
   .blog-content_container {
+    padding-top: 40px;
+    padding-bottom: 40px;
     width: 800px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    border: 1px solid black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    color: $blog_content_font_color;
+    border: $default_border;
+    box-shadow: $default_box_shadow;
+    color: $blog_content_text_color;
 
     p {
-      margin-top: 40px;
       margin-left: auto;
       margin-right: auto;
       width: 90%;
-      font-size: 24px;
-      line-height: 36px;
+      font-size: $medium_font_size;
+      line-height: $medium_font_size;
     }
     code {
       width: 90%;
       margin-left: auto;
       margin-right: auto;
+      font-size: $medium_font_size;
     }
   }
 }

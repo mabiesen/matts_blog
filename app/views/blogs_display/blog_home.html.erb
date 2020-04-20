@@ -1,0 +1,32 @@
+<div id='blog-home_container'>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Matt's Programming Blog</h1>
+      <p class="lead">
+        A blog to document what I have learned for your benefit and mine 
+      </p>
+    </div>
+  </div>
+
+  <div id='featured_blogs_container'>
+    <% @blogs.each do |blog|%>
+      <div class='blog_summary'>
+        <h2><%= blog.title %></h2>
+        <% max_length = 10 %>
+        <% if blog.summary.length > max_length %>
+	  <p>
+	    <%= blog.summary[0...max_length] %><span class="dots">...</span><span class="more" style='display:none;'><%= blog.summary[max_length..-1] %></span>
+	  </p>
+          <button class='readmore_toggle'>Read more</button>
+        <% else %>
+	  <p>
+	    <%= blog.summary %>
+	  </p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class='all_blogs_container'>
+  </div>
+</div>

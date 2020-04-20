@@ -12,6 +12,7 @@ require("highlightjs")
 require("codemirror")
 
 import '../stylesheets/application';
+import './readmore_toggle.js';
 import './highlights.js';
 import './basic_datatable.js';
 

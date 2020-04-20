@@ -1,13 +1,35 @@
+// https://coolors.co
+
+// defining site colors
 $white: white;
 $black: black;
-$light-gray: #f2f2f2;
+$baby-powder: #FCFAFA;
+$light-gray: #e9ecef;
+$davys-gray: #5E5E5E;
 $dark-gray: #bfbfbf;
+$light-blue-jeans: #5DA9E9;
+$dark-slate-blue: #41337A;
+$dark-purple: #331E36;
 
+// defining defaults colors
 $default_border_color: $black;
-$default_text_color: $black;
+$secondary_border_color: $white;
 
+$default_text_color: $dark-slate-blue;
+$secondary_text_color: $white;
+
+$default_background_color: $baby-powder;
+$secondary_background_color: $black; 
+$tertiary_background_color: $light-blue-jeans;
+
+// defining default color-dependent objects
+$default_box_shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$default_border: 1px solid $default_border_color;
+
+// defining layout detail
 $footer_background_color: $dark-gray;
 
-$blog_titlebox_background_color: $white;
-$blog_title_font_color: $black;
-$blog_content_font_color: $black;
+// defining page detail
+$blog_titlebox_background_color: $default_background_color;
+$blog_title_text_color: $default_text_color;
+$blog_content_text_color: $default_text_color;
