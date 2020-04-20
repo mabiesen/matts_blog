@@ -47,7 +47,7 @@
 	    <tbody>
 	      <% @blogs.each do | blog | %>
 	        <tr>
-                  <td><%= blog.title %></td>
+                  <td><%= link_to blog.title, "/blog_page/#{blog.title_url}"  %></td>
       	          <td><%= blog.summary %></td> 
 		  <td><%= blog.created_at.to_date %></td>
                 </tr>
