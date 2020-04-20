@@ -11,12 +11,12 @@
   <div class='container'>
     <div class='row'>
 	    
-      <div id='featured_blogs_container' class='container col-sm-6'>
+      <div id='featured_blogs_container' class='container col-sm-5'>
         <h1><u>Featured Blogs</u></h1>
-        <% @blogs.each do |blog|%>
+        <% @blogs[0...4].each do |blog|%>
           <div class='blog_summary row'>
             <div class='col-sm-12'>		    
-              <h3><%= blog.title %></h3>
+	      <h3><%= link_to blog.title, "/blog_page/#{blog.title_url}"  %></h3>
               <% max_length = 50 %>
               <% if blog.summary.length > max_length %>
 	        <p>
@@ -33,24 +33,28 @@
         <% end %>
       </div>
 
-      <div id='all_blogs_container' class='col-sm-6'>
+      <div id='all_blogs_container' class='col-sm-7'>
 	<h1><u>All Blogs</u></h1>
-	<table class='basic_datatable table table-striped table-bordered'>
-	  <thead>
-	    <tr>
-              <th>Title</th>
-	      <th>summary</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <% @blogs.each do | blog | %>
+	<div id='all_blogs_table_container'>
+	  <table class='basic_datatable table table-striped table-bordered'>
+	    <thead>
 	      <tr>
-                <td><%= blog.title %></td>
-	        <td><%= blog.summary %></td> 
-              </tr>
-	    <% end %>
-	  </tbody>
-	</table>
+                <th>Title</th>
+	        <th>Summary</th>
+		<th>Created On</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <% @blogs.each do | blog | %>
+	        <tr>
+                  <td><%= blog.title %></td>
+      	          <td><%= blog.summary %></td> 
+		  <td><%= blog.created_at.to_date %></td>
+                </tr>
+	      <% end %>
+	    </tbody>
+     	  </table>
+        </div>
       </div>
     </div>
   </div>

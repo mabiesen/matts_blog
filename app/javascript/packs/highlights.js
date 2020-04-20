@@ -1,4 +1,5 @@
 import hljs from 'highlightjs'
 document.addEventListener("turbolinks:load", () => {
-  hljs.initHighlightingOnLoad();
+  hljs.initHighlighting.called = false;
+  hljs.initHighlighting();
 });
