@@ -8,25 +8,51 @@
     </div>
   </div>
 
-  <div id='featured_blogs_container'>
-    <% @blogs.each do |blog|%>
-      <div class='blog_summary'>
-        <h2><%= blog.title %></h2>
-        <% max_length = 10 %>
-        <% if blog.summary.length > max_length %>
-	  <p>
-	    <%= blog.summary[0...max_length] %><span class="dots">...</span><span class="more" style='display:none;'><%= blog.summary[max_length..-1] %></span>
-	  </p>
-          <button class='readmore_toggle'>Read more</button>
-        <% else %>
-	  <p>
-	    <%= blog.summary %>
-	  </p>
+  <div class='container'>
+    <div class='row'>
+	    
+      <div id='featured_blogs_container' class='container col-sm-6'>
+        <h1><u>Featured Blogs</u></h1>
+        <% @blogs.each do |blog|%>
+          <div class='blog_summary row'>
+            <div class='col-sm-12'>		    
+              <h3><%= blog.title %></h3>
+              <% max_length = 50 %>
+              <% if blog.summary.length > max_length %>
+	        <p>
+	          <%= blog.summary[0...max_length] %><span class="dots">...</span><span class="more" style='display:none;'><%= blog.summary[max_length..-1] %></span>
+	        </p>
+                <button class='readmore_toggle'>Read more</button>
+              <% else %>
+	        <p>
+	          <%= blog.summary %>
+	        </p>
+              <% end %>
+            </div>
+          </div>
         <% end %>
       </div>
-    <% end %>
+
+      <div id='all_blogs_container' class='col-sm-6'>
+	<h1><u>All Blogs</u></h1>
+	<table class='basic_datatable table table-striped table-bordered'>
+	  <thead>
+	    <tr>
+              <th>Title</th>
+	      <th>summary</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <% @blogs.each do | blog | %>
+	      <tr>
+                <td><%= blog.title %></td>
+	        <td><%= blog.summary %></td> 
+              </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+      </div>
+    </div>
   </div>
 
-  <div class='all_blogs_container'>
-  </div>
 </div>

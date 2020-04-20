@@ -1,3 +1,10 @@
 #blog-home_container {
-
+  #featured_blogs_container {
+   // border: $default_border;
+   .blog_summary {
+     margin-top: 10px;  
+     padding-top: 10px;
+     padding-bottom: 10px;
+   }
+  }
 }
