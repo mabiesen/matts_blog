@@ -8,7 +8,7 @@
     "@rails/webpacker": "4.2.2",
     "bootstrap": "^4.4.1",
     "codemirror": "^5.52.2",
-    "datatables.net": "^1.10.20",
+    "datatables.net": "^1.10.22",
     "datatables.net-bs4": "^1.10.20",
     "highlightjs": "^9.16.2",
     "turbolinks": "^5.2.0"
